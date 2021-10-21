@@ -1,12 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
 }
+/* |||||||||||||||||||||||||||
+   |||     Nav Section     |||
+   ||||||||||||||||||||||||||| */
 
 nav {
   min-height: 100vh;
+  width: 100vw;
   background-image: url(./images/background-image.jpg);
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
+}
+
+.navbar-container {
+  width: 100%;
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo-container {
+  height: 50px;
+  display: flex;
+}
+
+.logo-container img {
+  width: 50px;
+}
+
+.hamburder {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+
+.navbar-container ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.navbar-container ul li {
+  list-style: none;
+  height: 100%;
+  transition: 0.7s ease;
+}
+
+.navbar-container ul li a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  height: 100%;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+/* |||||||||||||||||||||||||||
+   |||   End Nav Section   |||
+   ||||||||||||||||||||||||||| */
+
+@media screen and (max-width: 768px) {
+  .hamburder {
+    display: block;
+  }
+
+  .hamburder.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburder.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburder.active .bar:nth-child(2) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-links {
+    position: fixed;
+    flex-direction: column;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 1rem 0;
+  }
+
+  .nav-item.active {
+    left: 0;
+  }
 }
