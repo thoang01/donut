@@ -98,7 +98,6 @@ nav {
 
 .nav-item a:hover::after {
   width: 100%;
-  /* transition: width .3s; */
 }
 
 /* |||||||||||||||||||||||||||
@@ -162,7 +161,7 @@ nav {
     flex-direction: column;
     top: -100%;
     right: 0.1px;
-    background: var(--hamburger-background-color);
+    background: var(--primary-darker-color);
     text-align: center;
     transition: 0.3s;
   }
@@ -173,5 +172,8 @@ nav {
 
   .nav-links.active {
     top: 80px;
+  }
+  .navbar-container .nav-item a::after {
+    background: var(--secondary-darker-color);
   }
 }
