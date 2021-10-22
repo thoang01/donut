@@ -195,7 +195,7 @@ section {
 @media screen and (max-width: 768px) {
   nav {
     background-position: top;
-    background-size: contain;
+    background-size: 100%;
   }
   .hamburger {
     display: block;
@@ -346,7 +346,7 @@ section {
 
 @media screen and (min-width: 1200px) {
   .banner-punchline {
-    margin: 1.5em 0.5em 0 0;
+    margin: 1.5em 1em 0 0;
     font-size: 5rem;
     max-width: 800px;
   }
@@ -367,6 +367,6 @@ section {
 
 @media screen and (min-width: 1500px) {
   .banner-content-container {
-    margin: 2rem 10rem 0 0;
+    margin: 1.5rem 8rem 0 0;
   }
 }
