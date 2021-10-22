@@ -7,8 +7,10 @@ font-family: 'Nunito', sans-serif; */
 :root {
   /* --primary-color: #7271da; */
   --primary-color: #5c5be7;
+  --primary-alpha-color: #5b5be74b;
   --secondary-color: #ffbd7b;
   --secondary-alpha-color: #ffd2a4b2;
+
   --tertiary-color: rgb(0, 255, 213);
   --text-color: rgb(245, 227, 227);
 }
@@ -206,7 +208,7 @@ nav {
 
 .established {
   padding: 5em 2em;
-  background-color: var(--secondary-alpha-color);
+  background-color: var(--primary-alpha-color);
 }
 
 .established-container {
@@ -231,8 +233,6 @@ nav {
   min-width: 20px;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
 }
 
 .established-right h1 {
@@ -256,7 +256,7 @@ nav {
 
 .established-right a {
   font-family: "Fredoka One", cursive;
-  color: black;
+  color: rgba(0, 0, 0, 0.85);
   text-transform: uppercase;
   font-size: 1.2em;
 }
