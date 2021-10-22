@@ -11,6 +11,22 @@ document.querySelectorAll('.nav-item').forEach(n => n.addEventListener('click', 
   navMenu.classList.remove('active');
 }));
 
+// Sticky NavBar
+
+// window.onscroll = function() {myFunction()};
+
+// var navbar = document.querySelector('.navbar-container');
+// var sticky = navbar.offsetTop;
+
+// function myFunction() {
+//   if (window.pageYOffset >= sticky) {
+//     navbar.classList.toggle("sticky")
+//   } else {
+//     navbar.classList.remove("sticky");
+//   }
+//   console.log(navbar);
+// }
+
 
 
 

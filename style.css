@@ -4,9 +4,9 @@
 :root {
   /* --primary-color: #7271da; */
   --primary-color: #5c5be7;
-  --primary-darker-color: #4d4de7;
   --secondary-color: #ffbd7b;
-  --secondary-darker-color: #ffaa64;
+  --tertiary-color: rgb(0, 255, 213);
+  --text-color: rgb(245, 227, 227);
 }
 
 * {
@@ -17,11 +17,16 @@
   font-family: "Mukta", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
 button {
   outline: 0;
+  cursor: pointer;
   border: 1px solid var(--primary-color);
   background: var(--primary-color);
-  color: rgb(245, 227, 227);
   padding: 0.5em 1.5em;
   text-transform: uppercase;
   font-weight: 700;
@@ -51,6 +56,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
+  background: rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
 
@@ -88,10 +94,10 @@ nav {
 .navbar-container .nav-item {
   list-style: none;
   height: 100%;
+  padding: 0.5em;
 }
 
 .navbar-container ul li a {
-  text-decoration: none;
   color: black;
   text-transform: uppercase;
   height: 100%;
@@ -113,6 +119,10 @@ nav {
 
 .nav-item a:hover::after {
   width: 100%;
+}
+
+.nav-item.current a {
+  color: var(--primary-color);
 }
 
 /* |||||||||||||||||||||||||||
@@ -156,6 +166,14 @@ nav {
 }
 
 /* |||||||||||||||||||||||||||
+   |||    Offer Section    |||
+   ||||||||||||||||||||||||||| */
+
+section {
+  height: 100vh;
+}
+
+/* |||||||||||||||||||||||||||
    |||    Media Queries    |||
    ||||||||||||||||||||||||||| */
 
@@ -188,7 +206,11 @@ nav {
 
   .navbar-container ul li a {
     width: 100%;
-    color: rgb(245, 227, 227);
+    color: var(--text-color);
+  }
+
+  .navbar-container .nav-item a::after {
+    background: var(--secondary-color);
   }
 
   .nav-links {
@@ -196,10 +218,10 @@ nav {
     flex-direction: column;
     top: -100%;
     right: 0.1px;
-    background: var(--primary-darker-color);
+    background: var(--primary-color);
     text-align: center;
     transition: 0.3s;
-    z-index: 9;
+    z-index: -1;
   }
 
   .nav-item {
@@ -209,8 +231,9 @@ nav {
   .nav-links.active {
     top: 80px;
   }
-  .navbar-container .nav-item a::after {
-    background: var(--secondary-color);
+
+  li.nav-item.current a {
+    color: var(--secondary-color);
   }
 }
 
@@ -265,6 +288,11 @@ nav {
   }
   .banner-description {
     display: block;
+    max-width: 200px;
+  }
+
+  .banner-button {
+    width: 275px;
   }
 }
 
@@ -276,7 +304,7 @@ nav {
   }
 
   .banner-button {
-    margin: 10px;
+    /* margin: 10px; */
     width: 450px;
     margin-top: 40px;
   }
@@ -294,7 +322,7 @@ nav {
   }
 
   .banner-button {
-    width: 650px;
+    width: 550px;
     margin-top: 40px;
   }
 
@@ -306,7 +334,7 @@ nav {
 
 @media screen and (min-width: 1200px) {
   .banner-punchline {
-    margin: 1em 0.5em 0 0;
+    margin: 1.5em 0.5em 0 0;
     font-size: 5rem;
     max-width: 800px;
   }
