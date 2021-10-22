@@ -4,10 +4,9 @@
 :root {
   /* --primary-color: #7271da; */
   --primary-color: #5c5be7;
-  --primary-darker-color: #5c5be7;
+  --primary-darker-color: #4d4de7;
   --secondary-color: #ffbd7b;
   --secondary-darker-color: #ffaa64;
-  --hamburger-background-color: #ecb000;
 }
 
 * {
@@ -21,8 +20,8 @@
 button {
   outline: 0;
   border: 1px solid var(--primary-color);
-  background: var(--primary-darker-color);
-  color: rgb(255, 219, 219);
+  background: var(--primary-color);
+  color: rgb(245, 227, 227);
   padding: 0.5em 1.5em;
   text-transform: uppercase;
   font-weight: 700;
@@ -145,7 +144,7 @@ nav {
 }
 
 .banner-button {
-  margin: 15px 0;
+  margin: 20px 0;
   display: flex;
   justify-content: center;
   width: 200px;
@@ -184,6 +183,7 @@ nav {
 
   .navbar-container ul li a {
     width: 100%;
+    color: rgb(245, 227, 227);
   }
 
   .nav-links {
@@ -204,6 +204,6 @@ nav {
     top: 80px;
   }
   .navbar-container .nav-item a::after {
-    background: var(--secondary-darker-color);
+    background: var(--secondary-color);
   }
 }
