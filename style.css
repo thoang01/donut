@@ -9,6 +9,10 @@
   --text-color: rgb(245, 227, 227);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   padding: 0;
   margin: 0;
