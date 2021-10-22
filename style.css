@@ -17,6 +17,15 @@
   /* font-family: "Nunito", sans-serif; */
   font-family: "Mukta", sans-serif;
 }
+
+button {
+  outline: 0;
+  background: var(--secondary-color);
+  padding: 1em 2em;
+  border-radius: 30px;
+  font-size: 1em;
+}
+
 /* |||||||||||||||||||||||||||
    |||     Nav Section     |||
    ||||||||||||||||||||||||||| */
@@ -28,6 +37,8 @@ nav {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar-container {
@@ -104,21 +115,27 @@ nav {
    |||    Banner Section   |||
    ||||||||||||||||||||||||||| */
 
-/* .banner-content-container {
+.banner-content-container {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 10px;
-} */
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 100%;
+}
 
 .banner-punchline {
   /* margin-right: 10px; */
-  max-width: 100%;
-  font-size: 3rem;
-  /* font-family: "Mukta", sans-serif; */
+  max-width: 300px;
+  font-size: 2rem;
+  line-height: 1.5em;
 }
 
 .banner-punchline span {
   color: var(--primary-color);
+}
+
+.banner-description {
+  max-width: 225px;
+  line-height: 1.5em;
 }
 
 /* |||||||||||||||||||||||||||
