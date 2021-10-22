@@ -1,10 +1,14 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"); */
-@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Mukta:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap");
+
+/* font-family: 'Fredoka One', cursive;
+font-family: 'Mukta', sans-serif;
+font-family: 'Nunito', sans-serif; */
 
 :root {
   /* --primary-color: #7271da; */
   --primary-color: #5c5be7;
   --secondary-color: #ffbd7b;
+  --secondary-alpha-color: #ffd2a4b2;
   --tertiary-color: rgb(0, 255, 213);
   --text-color: rgb(245, 227, 227);
 }
@@ -15,6 +19,10 @@
   box-sizing: border-box;
   /* font-family: "Nunito", sans-serif; */
   font-family: "Mukta", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -47,6 +55,21 @@ button {
   font-size: 0.8em;
 }
 
+/* section {
+  height: 100vh;
+  padding: 5rem 0;
+} */
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+/* .container {
+  max-width: 1380px;
+  margin: 0 auto;
+} */
+
 /* |||||||||||||||||||||||||||
    |||     Nav Section     |||
    ||||||||||||||||||||||||||| */
@@ -69,7 +92,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
-  background: rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
 
@@ -178,12 +200,70 @@ nav {
   width: 200px;
 }
 
-/* |||||||||||||||||||||||||||
-   |||    Offer Section    |||
-   ||||||||||||||||||||||||||| */
+/* ||||||||||||||||||||||||||||||||||
+   |||     Established Section    |||
+   |||||||||||||||||||||||||||||||||| */
 
-section {
-  height: 100vh;
+.established {
+  padding: 5em 2em;
+  background-color: var(--secondary-alpha-color);
+}
+
+.established-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.established-left {
+  display: flex;
+  justify-content: center;
+  min-width: 200px;
+  /* padding-right: 5%; */
+}
+
+.established-left img {
+  border-radius: 2rem;
+}
+
+.established-right {
+  margin-top: 30px;
+  min-width: 20px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.established-right h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-family: "Fredoka One", cursive;
+}
+
+.established-right h3 {
+  color: var(--text-color);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 1em;
+  background-color: rgba(0, 0, 0, 0.85);
+  width: fit-content;
+  padding: 0 1em;
+  border-radius: 20px;
+}
+
+.established-right a {
+  font-family: "Fredoka One", cursive;
+  color: black;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+.established-right a:hover {
+  color: var(--primary-color);
+  transition: all 0.3s ease-in;
 }
 
 /* |||||||||||||||||||||||||||
@@ -245,7 +325,7 @@ section {
   }
 
   li.nav-item.current a {
-    color: var(--secondary-color);
+    color: var(--secondary-color) !important;
   }
 }
 
@@ -292,6 +372,8 @@ section {
   }
 }
 
+/* Responsive for Tablet */
+
 @media screen and (min-width: 769px) {
   .banner-punchline {
     margin: 3.5em 0.5em 0 0;
@@ -305,6 +387,41 @@ section {
 
   .banner-button {
     width: 275px;
+  }
+
+  .established {
+    padding: 5em 4em;
+  }
+
+  .established-container {
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .established-left {
+    padding-left: 5%;
+    width: 600px;
+  }
+
+  .established-left img {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .established-right {
+    margin-top: 0;
+    height: 100%;
+  }
+
+  .established-right h1 {
+    font-size: 2.75rem;
+  }
+  .established-right h3 {
+    font-size: 1.2rem;
+  }
+  .established-right a {
+    font-size: 1.5rem;
   }
 }
 
