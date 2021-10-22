@@ -7,12 +7,17 @@ font-family: 'Nunito', sans-serif; */
 :root {
   /* --primary-color: #7271da; */
   --primary-color: #5c5be7;
-  --primary-alpha-color: #5b5be74b;
+  /* --primary-alpha-color: #5b5be748; */
+  --primary-alpha-color: #5b5be750;
   --secondary-color: #ffbd7b;
   --secondary-alpha-color: #ffd2a4b2;
+  --tertiary-color: #fd636b;
+  --tertiary-alpha-color: #ff7d84;
+  --pink-color: #f3cae5d2;
+  --text-color: rgb(247, 239, 239);
+  --section-padding: 5em 2em;
 
-  --tertiary-color: rgb(0, 255, 213);
-  --text-color: rgb(245, 227, 227);
+  --transition: all 0.3s ease-in;
 }
 
 * {
@@ -116,8 +121,8 @@ nav {
   width: 25px;
   height: 3px;
   margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
   background-color: black;
 }
 
@@ -207,7 +212,7 @@ nav {
    |||||||||||||||||||||||||||||||||| */
 
 .established {
-  padding: 5em 2em;
+  padding: var(--section-padding);
   background-color: var(--primary-alpha-color);
 }
 
@@ -256,14 +261,95 @@ nav {
 
 .established-right a {
   font-family: "Fredoka One", cursive;
-  color: rgba(0, 0, 0, 0.85);
+  color: black;
   text-transform: uppercase;
   font-size: 1.2em;
 }
 
 .established-right a:hover {
   color: var(--primary-color);
-  transition: all 0.3s ease-in;
+  transition: var(--transition);
+}
+
+.gradient {
+  width: 100%;
+  height: 10vh;
+  background: linear-gradient(
+    180deg,
+    rgba(203, 203, 248, 1) 0%,
+    rgba(245, 211, 233, 1) 100%
+  );
+}
+
+/* ||||||||||||||||||||||||||||||||
+   |||     Location Section     |||
+   |||||||||||||||||||||||||||||||| */
+
+.location {
+  padding: 5em 3.5em;
+  background: var(--pink-color);
+}
+
+.location-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location-card {
+  max-width: 400px;
+  background: white;
+  border-radius: 1em;
+  margin-bottom: 2em;
+  transition: var(--transition);
+}
+
+.location h4 {
+  padding: 0.5em 0;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  border-radius: 15px 15px 0 0;
+  text-align: center;
+  background: black;
+  transition: var(--transition);
+}
+
+.location-card-info {
+  padding: 32px;
+  height: 250px;
+}
+
+.location p {
+  font-size: 1.3rem;
+  color: black;
+  font-weight: 700;
+  line-height: 25px;
+  margin-bottom: 10px;
+}
+
+.location p span {
+  font-weight: 400;
+}
+
+.location-card:hover {
+  transform: scale(1.05);
+}
+
+.location-card:hover h4 {
+  color: var(--tertiary-alpha-color);
+}
+
+.location-btn {
+  padding: 0.5em 0;
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+  border-radius: 0 0 15px 15px;
+  background: var(--tertiary-color);
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 /* |||||||||||||||||||||||||||
@@ -459,7 +545,18 @@ nav {
     max-width: 500px;
     font-size: 1.2rem;
   }
+  .location-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .location-card {
+    margin: 0 1em;
+    margin-bottom: 0;
+  }
 }
+
+/* Responsive for Computer */
 
 @media screen and (min-width: 1200px) {
   .banner-punchline {
