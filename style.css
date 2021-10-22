@@ -545,12 +545,17 @@ nav {
     max-width: 500px;
     font-size: 1.2rem;
   }
+
+  .location {
+    padding: 5em 3em;
+  }
   .location-container {
     flex-direction: row;
     justify-content: space-evenly;
   }
 
   .location-card {
+    width: 350px;
     margin: 0 1em;
     margin-bottom: 0;
   }
