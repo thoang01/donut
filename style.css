@@ -20,10 +20,14 @@
 
 button {
   outline: 0;
-  background: var(--secondary-color);
-  padding: 1em 2em;
+  border: 1px solid var(--primary-color);
+  background: var(--primary-darker-color);
+  color: rgb(255, 219, 219);
+  padding: 0.5em 1.5em;
+  text-transform: uppercase;
+  font-weight: 700;
   border-radius: 30px;
-  font-size: 1em;
+  font-size: 0.8em;
 }
 
 /* |||||||||||||||||||||||||||
@@ -123,10 +127,11 @@ nav {
 }
 
 .banner-punchline {
-  /* margin-right: 10px; */
-  max-width: 300px;
-  font-size: 2rem;
-  line-height: 1.5em;
+  /* margin-bottom: 10px */
+  max-width: 220px;
+  font-size: 1.3rem;
+  text-align: center;
+  line-height: 1.4em;
 }
 
 .banner-punchline span {
@@ -135,7 +140,15 @@ nav {
 
 .banner-description {
   max-width: 225px;
+  display: none;
   line-height: 1.5em;
+}
+
+.banner-button {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  width: 200px;
 }
 
 /* |||||||||||||||||||||||||||
