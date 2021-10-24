@@ -11,7 +11,7 @@ font-family: 'Nunito', sans-serif; */
   /* --primary-alpha-color: #5b5be748; */
   --primary-alpha-color: #5b5be750;
   --secondary-color: #ffbd7b;
-  --secondary-alpha-color: #ffd2a4b2;
+  --blue-color: #c1dcff;
   --tertiary-color: #ff6d74;
   --tertiary-alpha-color: rgba(255, 125, 131, 0.911);
   --pink-color: rgba(245, 211, 233, 1);
@@ -82,7 +82,7 @@ nav::after {
   left: 0;
   right: 0;
   background-color: rgb(49, 49, 49);
-  opacity: 0.85;
+  opacity: 0.9;
   z-index: 1;
 }
 
@@ -343,7 +343,7 @@ nav::after {
 
 .location {
   padding: 5em 2em;
-  background: var(--pink-color);
+  background: var(--blue-color);
 }
 
 .location-container {
@@ -393,31 +393,155 @@ nav::after {
   transform: scale(1.05);
 }
 
-.location-card:hover h4 {
-  color: var(--tertiary-color);
-}
-
 .location-btn {
   padding: 0.5em 0;
   font-size: 1.2rem;
   color: white;
   text-align: center;
   border-radius: 0 0 15px 15px;
-  background: var(--tertiary-color);
+  background: var(--primary-color);
   text-transform: uppercase;
   font-weight: 700;
 }
 
 /* ||||||||||||||||||||||||||||||||
-   |||     Sprinkle Section     |||
+   |||      Footer Section      |||
    |||||||||||||||||||||||||||||||| */
 
-.sprinkle {
-  width: 100%;
-  height: 15vh;
+footer {
+  padding: var(--section-padding);
+  background-image: url(./images/banner-image.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(49, 49, 49);
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.footer-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+}
+
+.footer-title {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.footer-logo .social-media {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-media i.fab {
+  font-size: 24px;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.social-media i.fab:hover {
+  color: var(--primary-color-2);
+}
+
+.footer-navigation {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.banner-links a {
+  color: white;
+  transition: var(--transition);
+}
+
+.banner-links a:hover {
+  color: var(--primary-color-2);
+}
+
+.footer-contact {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-item {
+  display: flex;
+  color: white;
+}
+
+.contact-item i {
+  padding-right: 10px;
+}
+
+.footer-newsletter {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter-input {
+  display: flex;
+}
+
+.footer-newsletter .footer-email {
+  border-radius: 5px;
+  padding: 0.25em 0.25em;
+  border: none;
+  width: 75%;
+  outline: none;
+}
+
+.footer-newsletter .footer-enter {
   background: var(--primary-color);
-  background-image: url(./images/blue-sprinkle.png);
-  background-size: 6%;
+  color: white;
+  outline: none;
+  border: none;
+  margin-left: 10px;
+  padding: 0.25em 1em;
+  border-radius: 5px;
 }
 
 /* |||||||||||||||||||||||||||
@@ -546,6 +670,41 @@ nav::after {
   }
   .established-right a {
     font-size: 1.5rem;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .footer-navigation {
+    align-items: none;
+  }
+
+  .banner-links {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .contact-container {
+    justify-content: flex-start;
+  }
+
+  .footer-navigation,
+  .footer-contact,
+  .footer-newsletter {
+    margin-top: 0;
+  }
+
+  .footer-newsletter {
+    height: 100%;
+    justify-content: flex-start;
+  }
+
+  .footer-newsletter .footer-email {
+    padding: 0.5em 1em;
   }
 }
 
