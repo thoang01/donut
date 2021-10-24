@@ -7,12 +7,13 @@ font-family: 'Nunito', sans-serif; */
 :root {
   /* --primary-color: #7271da; */
   --primary-color: #5c5be7;
+  --primary-color-2: #8282ff;
   /* --primary-alpha-color: #5b5be748; */
   --primary-alpha-color: #5b5be750;
   --secondary-color: #ffbd7b;
   --secondary-alpha-color: #ffd2a4b2;
-  --tertiary-color: #ff848a;
-  --tertiary-alpha-color: #ff7d84;
+  --tertiary-color: #ff6d74;
+  --tertiary-alpha-color: rgba(255, 125, 131, 0.911);
   --pink-color: rgba(245, 211, 233, 1);
   --text-color: rgb(247, 239, 239);
   --section-padding: 5em 2em;
@@ -50,18 +51,6 @@ a {
   color: var(--text-color);
 }
 
-button {
-  outline: 0;
-  cursor: pointer;
-  border: 1px solid var(--primary-color);
-  background: var(--primary-color);
-  padding: 0.5em 1.5em;
-  text-transform: uppercase;
-  font-weight: 700;
-  border-radius: 30px;
-  font-size: 0.8em;
-}
-
 .gradient {
   width: 100%;
   height: 15vh;
@@ -77,15 +66,24 @@ img {
    ||||||||||||||||||||||||||| */
 
 nav {
-  /* min-height: 100vh; */
   width: 100vw;
-  background: var(--secondary-color);
-  /* background-image: url(./images/background-image.jpg);
+  background-image: url(./images/banner-image.jpg);
   background-size: cover;
-  background-position: left;
-  background-repeat: no-repeat; */
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+nav::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(49, 49, 49);
+  opacity: 0.85;
+  z-index: 1;
 }
 
 .navbar-container {
@@ -93,8 +91,7 @@ nav {
   top: 0;
   width: 100%;
   min-height: 80px;
-  background: #ffbd7bc2;
-  /* opacity: 0.5; */
+  background: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -177,17 +174,86 @@ nav {
   justify-content: center;
   align-items: center;
   max-width: 100%;
-  margin-top: 120px;
+  z-index: 9;
+  margin: 120px 0 60px 0;
 }
 
 .banner-content-left {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   min-width: 20px;
+  margin-bottom: 20px;
 }
 
 .banner-content-left img {
-  width: 50%;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.banner-btn {
+  display: flex;
+  font-size: 2em;
+  gap: 50px;
+}
+
+.banner-btn svg {
+  border: 4px solid white;
+  border-radius: 50%;
+  padding: 0.25em;
+  transition: var(--transition);
+}
+
+.banner-btn svg:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.banner-content-right {
+  margin-top: 30px;
+  min-width: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.banner-content-right h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Fredoka One", cursive;
+}
+
+.banner-content-right h3 {
+  color: var(--text-color);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 1em;
+  background-color: var(--primary-color);
+  width: fit-content;
+  padding: 0 1em;
+  border-radius: 20px;
+}
+
+.banner-content-right a {
+  border: 4px solid var(--primary-color);
+  border-radius: 10px;
+  margin-top: 0.5em;
+  padding: 0.25em 1em;
+  font-family: "Fredoka One", cursive;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+.banner-content-right a:hover {
+  color: var(--primary-color-2);
+  border-color: white;
+  background-color: white;
+  transition: var(--transition);
 }
 
 .banner-established {
@@ -225,41 +291,28 @@ nav {
 }
 
 .established-right {
-  margin-top: 30px;
-  min-width: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.established-right h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  color: var(--primary-color);
-  font-family: "Fredoka One", cursive;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .established-right h3 {
-  color: var(--text-color);
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  font-size: 1em;
   background-color: rgba(0, 0, 0, 0.85);
-  width: fit-content;
-  padding: 0 1em;
-  border-radius: 20px;
+}
+
+.established-right h1 {
+  color: var(--primary-color);
+  font-size: 2.5em;
 }
 
 .established-right a {
-  font-family: "Fredoka One", cursive;
+  margin: 0;
   color: black;
-  text-transform: uppercase;
-  font-size: 1.2em;
+  border: none;
+  padding: 0;
 }
 
 .established-right a:hover {
   color: var(--tertiary-alpha-color);
-  transition: var(--transition);
 }
 
 .established-location {
@@ -327,7 +380,7 @@ nav {
 }
 
 .location-card:hover h4 {
-  color: var(--tertiary-alpha-color);
+  color: var(--tertiary-color);
 }
 
 .location-btn {
@@ -360,10 +413,6 @@ nav {
 /* /////////////// Hamburger Menu for Mobile //////////////// */
 
 @media screen and (max-width: 768px) {
-  nav {
-    background-position: top;
-    background-size: 100%;
-  }
   .hamburger {
     display: block;
   }
@@ -419,6 +468,23 @@ nav {
 /* Responsive for Tablet */
 
 @media screen and (min-width: 769px) {
+  .banner-content-container {
+    flex-direction: row;
+  }
+
+  .banner-content-left {
+    width: 300px;
+    margin: 0;
+  }
+
+  .banner-content-left img {
+    width: 100%;
+  }
+
+  .banner-content-right {
+    margin: 0;
+  }
+
   .established {
     padding: 5em 4em;
   }

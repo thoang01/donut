@@ -1,3 +1,7 @@
+// |||||||||||||||||||||||||||||||||
+// |||      Hamburger Toggle     |||
+// |||||||||||||||||||||||||||||||||
+
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-links');
 
@@ -11,22 +15,44 @@ document.querySelectorAll('.nav-item').forEach(n => n.addEventListener('click', 
   navMenu.classList.remove('active');
 }));
 
-// Sticky NavBar
 
-// window.onscroll = function() {myFunction()};
+// |||||||||||||||||||||||
+// |||      Slider     |||
+// |||||||||||||||||||||||
 
-// var navbar = document.querySelector('.navbar-container');
-// var sticky = navbar.offsetTop;
+const donutImg = document.getElementById('banner-donut');
 
-// function myFunction() {
-//   if (window.pageYOffset >= sticky) {
-//     navbar.classList.toggle("sticky")
-//   } else {
-//     navbar.classList.remove("sticky");
-//   }
-//   console.log(navbar);
-// }
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const donut = new Array;
+
+// initiate starting donut
+let currentDonut = 1;
+
+function showDonut() {
+  donut[currentDonut] = "./images/banner-donut-" + currentDonut + ".png";
+  donutImg.src = donut[currentDonut];
+}
 
 
+window.addEventListener('DOMContentLoaded', function() {
+  showDonut(currentDonut);
+});
+
+nextBtn.addEventListener('click', function() {
+  currentDonut++;
+  if (currentDonut > 8) {
+    currentDonut = 1;
+  }
+  showDonut(currentDonut);
+});
+
+prevBtn.addEventListener('click', function() {
+  currentDonut--;
+  if (currentDonut < 1) {
+    currentDonut = 8;
+  }
+  showDonut(currentDonut);
+});
 
 
