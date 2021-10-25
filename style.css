@@ -883,10 +883,13 @@ hr {
 
   .about {
     background-color: white;
+    display: flex;
+    justify-content: center;
   }
 
   .about-container {
-    padding: 0 80px;
+    /* padding: 0 80px; */
+    width: 1200px;
     background-color: white;
   }
 
