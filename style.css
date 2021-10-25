@@ -90,7 +90,7 @@ nav::after {
   width: 100%;
   min-height: 80px;
   background: white;
-  opacity: 0.8;
+  /* opacity: 0.8; */
   display: flex;
   justify-content: space-between;
   align-items: center;
