@@ -588,6 +588,7 @@ hr {
 .about-container img {
   margin-top: 20px;
   max-width: 500px;
+  border-radius: 15px;
 }
 
 /* |||||||||||||||||||||||||||
