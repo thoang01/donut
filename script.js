@@ -20,7 +20,7 @@ document.querySelectorAll('.nav-item').forEach(n => n.addEventListener('click', 
 // |||      Slider     |||
 // |||||||||||||||||||||||
 
-setInterval(nextDonut, 5000);
+setInterval(nextDonut, 4000);
 
 const donutImg = document.getElementById('banner-donut');
 
