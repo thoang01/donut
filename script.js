@@ -20,6 +20,8 @@ document.querySelectorAll('.nav-item').forEach(n => n.addEventListener('click', 
 // |||      Slider     |||
 // |||||||||||||||||||||||
 
+setInterval(nextDonut, 5000);
+
 const donutImg = document.getElementById('banner-donut');
 
 const prevBtn = document.querySelector('.prev-btn');
@@ -30,6 +32,15 @@ const donut = new Array;
 let currentDonut = 1;
 
 function showDonut() {
+  donut[currentDonut] = "./images/banner-donut-" + currentDonut + ".png";
+  donutImg.src = donut[currentDonut];
+}
+
+function nextDonut() {
+  currentDonut++;
+  if (currentDonut > 8) {
+    currentDonut = 1;
+  }
   donut[currentDonut] = "./images/banner-donut-" + currentDonut + ".png";
   donutImg.src = donut[currentDonut];
 }
