@@ -636,30 +636,21 @@ hr {
 .contact-form .input-text:focus {
   outline: none;
 }
-.contact-form .input-text:focus + .label,
-.contact-form .input-text.not-empty + .label {
-  transform: translateY(-24px);
-}
-.contact-form .label {
-  position: absolute;
-  left: 20px;
-  bottom: 11px;
-  font-family: Lusitana, serif;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 400;
+
+::placeholder {
   color: black;
-  cursor: text;
-  transition: transform 0.2s ease-in-out;
 }
+
 .contact-form .submit-btn:hover {
   background-color: black;
   color: #fff;
+  background-color: white;
+  color: var(--primary-color);
 }
 
 .contact-form .submit-btn {
-  background-color: white;
-  color: var(--primary-color);
+  background-color: black;
+  color: #fff;
   display: inline-block;
   font-family: Raleway, sans-serif;
   text-transform: uppercase;

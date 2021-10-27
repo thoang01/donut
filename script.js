@@ -66,4 +66,6 @@ prevBtn.addEventListener('click', function() {
   showDonut(currentDonut);
 });
 
-
+// |||||||||||||||||||||||
+// |||       Form      |||
+// |||||||||||||||||||||||
